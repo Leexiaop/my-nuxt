@@ -5,6 +5,7 @@ router.get('/', async (ctx) => {
     ctx.body = {
         data: ['beij', 'tianj']
     }
+    console.log(111)
 })
 
 router.use('/list', list.routes(), list.allowedMethods())

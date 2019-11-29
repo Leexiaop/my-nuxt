@@ -4,15 +4,15 @@
     </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
+// import { mapGetters } from 'vuex'
 export default {
     data () {
         return {
-            list: []
+            GET_PRODUCT_LIST_DATA: []
         }
     },
     async asyncData ({store, param}) {
-      await store.dispatch('GET_PRODUCT_LIST_ACTION')
+    //   await store.dispatch('GET_PRODUCT_LIST_ACTION')
     },
     // mounted () {
     //     this.$store.dispatch('add')
@@ -21,9 +21,9 @@ export default {
     //    await store.dispatch('add')
     // },
     computed: {
-        ...mapGetters([
-          'GET_PRODUCT_LIST_DATA'
-        ])
+        // ...mapGetters([
+        //   'GET_PRODUCT_LIST_DATA'
+        // ])
     }
 }
 </script>

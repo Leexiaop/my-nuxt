@@ -1,6 +1,12 @@
 
 module.exports = {
   mode: 'universal',
+  /**
+   *中间件
+   */
+  router: {
+    middleware: 'checklogin'
+  },
   /*
   ** Headers of the page
   */
