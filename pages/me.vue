@@ -1,21 +1,8 @@
 <template>
-    <div class="me">
-        <!-- <div class="me">{{'姓名:' + GET_USERINFO_DATA.name + '年龄:' + GET_USERINFO_DATA.age}}</div> -->
-    </div>
+    <div class="me">我就我</div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
-export default {
-    middleware: 'checklogin',
-    async asyncData ({store, param}) {
-        await store.dispatch('GET_USERINFO_ACTION')
-    },
-    computed: {
-        ...mapGetters([
-          'GET_USERINFO_DATA'
-        ])
-    }
-}
+export default {}
 </script>
 <style lang="less" scoped>
 

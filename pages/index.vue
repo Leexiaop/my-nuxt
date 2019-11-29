@@ -1,29 +1,22 @@
 <template>
     <div class="index">
-        <div v-for="(item, index) in GET_PRODUCT_LIST_DATA" :key="index">{{item}}</div>
+        <ul>
+            <li v-for="(item, index) in list" :key="index">{{item}}</li>
+        </ul>
     </div>
 </template>
 <script>
-// import { mapGetters } from 'vuex'
+import * as types from '~/assets/actions_types'
+
 export default {
-    data () {
-        return {
-            GET_PRODUCT_LIST_DATA: []
-        }
+    async asyncData ({store}) {
+        await store.dispatch(`${types.PRODUCT_LIST}`)
     },
-    async asyncData ({store, param}) {
-    //   await store.dispatch('GET_PRODUCT_LIST_ACTION')
-    },
-    // mounted () {
-    //     this.$store.dispatch('add')
-    // },
-    // async fetch({store, param}) {
-    //    await store.dispatch('add')
-    // },
     computed: {
-        // ...mapGetters([
-        //   'GET_PRODUCT_LIST_DATA'
-        // ])
+        list () {
+            return [...this.$store.getters[`${types.PRODUCT_LIST}`]]
+
+        }
     }
 }
 </script>
