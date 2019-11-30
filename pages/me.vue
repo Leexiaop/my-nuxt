@@ -1,5 +1,7 @@
 <template>
-    <div class="me">我就我</div>
+    <div class="me">
+        <span>我就我</span>
+    </div>
 </template>
 <script>
 export default {}

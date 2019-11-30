@@ -1,4 +1,5 @@
 import * as types from '~/assets/actions_types'
+// import api from '~/'
 export const state = () => ({
     list: []
 })
