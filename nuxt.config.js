@@ -4,9 +4,9 @@ module.exports = {
   /**
    *中间件
    */
-  // router: {
-  //   middleware: 'checklogin'
-  // },
+  router: {
+    middleware: 'checklogin'
+  },
   /*
   ** Headers of the page
   */

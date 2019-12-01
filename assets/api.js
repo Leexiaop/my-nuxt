@@ -1,14 +1,14 @@
 import http from './http'
-import url from './url'
-
+import url from './urls'
+import axios from 'axios'
 export default {
-    getProduct: (param) => {
-        return http.get(url.product, param)
+    getProduct: (param = {}) => {
+        return http.get(url.product, { params: param })
     },
-    getProductList: (param) => {
-        return http.get(url.productList, param)
+    getProductList: (param = {}) => {
+        return http.get(url.productList, { params: param })
     },
-    getUser: (param) => {
-        return http.get(url.user, param)
+    getUser: (param = {}) => {
+        return http.get(url.user, { params: param })
     }
 }

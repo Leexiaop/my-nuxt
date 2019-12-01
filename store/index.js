@@ -1,12 +1,14 @@
 import * as types from '~/assets/actions_types'
-// import api from '~/'
+import api from '~/assets/api'
+import axios from 'axios'
 export const state = () => ({
     list: []
 })
 
 export const actions = {
     [types.PRODUCT_LIST]: async (context, param) => {
-        context.commit(`${types.PRODUCT_LIST}`, ['1', '2', '23'])
+        const data = await api.getProduct()
+        context.commit(`${types.PRODUCT_LIST}`, data)
     }
 }
 
