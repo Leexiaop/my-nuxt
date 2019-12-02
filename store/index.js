@@ -1,6 +1,5 @@
 import * as types from '~/assets/actions_types'
 import api from '~/assets/api'
-import axios from 'axios'
 export const state = () => ({
     list: []
 })
