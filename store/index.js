@@ -5,20 +5,20 @@ export const state = () => ({
 })
 
 export const actions = {
-    [types.PRODUCT_LIST]: async (context, param) => {
-        const data = await api.getProduct()
-        context.commit(`${types.PRODUCT_LIST}`, data)
+    async [types.PRODUCT_LIST] (context, param = {}) {
+        const { data } = await api.getProduct(param)
+        context.commit(types.PRODUCT_LIST, data.data)
     }
 }
 
 export const mutations = {
-    [types.PRODUCT_LIST]: (state, data) => {
+    [types.PRODUCT_LIST] (state, data = {}) {
         return state.list = data
     }
-}
+} 
 
 export const getters = {
-    [types.PRODUCT_LIST]: (state) => {
+    [types.PRODUCT_LIST] (state) {
         return state.list
     }
 }

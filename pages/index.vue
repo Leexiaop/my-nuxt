@@ -10,12 +10,11 @@ import * as types from '~/assets/actions_types'
 
 export default {
     async asyncData ({store}) {
-        await store.dispatch(`${types.PRODUCT_LIST}`)
+        await store.dispatch(types.PRODUCT_LIST)
     },
     computed: {
         list () {
-            return [...this.$store.getters[`${types.PRODUCT_LIST}`]]
-
+            return [...this.$store.getters[types.PRODUCT_LIST]]
         }
     }
 }

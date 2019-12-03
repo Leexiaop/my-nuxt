@@ -1,6 +1,6 @@
 import http from './http'
 import url from './urls'
-import axios from 'axios'
+
 export default {
     getProduct: (param = {}) => {
         return http.get(url.product, { params: param })
